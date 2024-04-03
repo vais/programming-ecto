@@ -1,11 +1,11 @@
-#---
+# ---
 # Excerpted from "Programming Ecto",
 # published by The Pragmatic Bookshelf.
 # Copyrights apply to this code. It may not be used to create training material,
 # courses, books, articles, and the like. Contact us if you are in doubt.
 # We make no guarantees that this code is fit for any purpose.
 # Visit https://pragprog.com/titles/wmecto for more book information.
-#---
+# ---
 defmodule MusicDB.MixProject do
   use Mix.Project
 
@@ -31,10 +31,8 @@ defmodule MusicDB.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto_sql, "~> 3.0"},
-      {:postgrex, ">= 0.0.0"},
-      {:mariaex, ">= 0.0.0"},
-      {:jason, "~> 1.1"}
+      {:ecto_sql, "~> 3.11"},
+      {:postgrex, ">= 0.0.0"}
     ]
   end
 
