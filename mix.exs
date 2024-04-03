@@ -32,7 +32,8 @@ defmodule MusicDB.MixProject do
   defp deps do
     [
       {:ecto_sql, "~> 3.11"},
-      {:postgrex, ">= 0.0.0"}
+      {:postgrex, ">= 0.0.0"},
+      {:jason, ">= 0.0.0"}
     ]
   end
 
