@@ -14,6 +14,7 @@ defmodule MusicDB.MixProject do
       app: :music_db,
       version: "0.1.0",
       elixir: "~> 1.4",
+      elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       aliases: aliases()
@@ -27,6 +28,9 @@ defmodule MusicDB.MixProject do
       mod: {MusicDB.Application, []}
     ]
   end
+
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_), do: ["lib"]
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do

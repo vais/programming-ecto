@@ -7,12 +7,8 @@
 # Visit https://pragprog.com/titles/wmecto for more book information.
 # ---
 defmodule MusicDB.AlbumTest do
-  use ExUnit.Case, async: true
+  use MusicDB.DataCase, async: true
   alias MusicDB.{Repo, Album}
-
-  setup do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MusicDB.Repo)
-  end
 
   test "insert album" do
     album = MusicDB.Repo.insert!(%MusicDB.Album{title: "Giant Steps"})
