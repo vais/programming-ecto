@@ -3,19 +3,19 @@
     "type": "app",
     "alternate": "test/music_db/{}_test.exs",
     "template": [
-      "defmodule MusicDb.{camelcase|capitalize|dot} do",
+      "defmodule MusicDB.{camelcase|capitalize|dot} do",
       "end"
     ]
   },
 
   "test/music_db/*_test.exs": {
-    "type": "test",
+    "type": "test-app",
     "alternate": "lib/music_db/{}.ex",
     "template": [
-      "defmodule MusicDb.{camelcase|capitalize|dot}Test do",
+      "defmodule MusicDB.{camelcase|capitalize|dot}Test do",
       "  use ExUnit.Case, async: true",
       "",
-      "  alias MusicDb.{camelcase|capitalize|dot}",
+      "  alias MusicDB.{camelcase|capitalize|dot}",
       "end"
     ]
   },
@@ -24,18 +24,18 @@
     "type": "controller",
     "alternate": "test/music_db_web/controllers/{}_controller_test.exs",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}Controller do",
-      "  use MusicDbWeb, :controller",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}Controller do",
+      "  use MusicDBWeb, :controller",
       "end"
     ]
   },
 
   "test/music_db_web/controllers/*_controller_test.exs": {
-    "type": "test",
+    "type": "test-controller",
     "alternate": "lib/music_db_web/controllers/{}_controller.ex",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}ControllerTest do",
-      "  use MusicDbWeb.ConnCase, async: true",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}ControllerTest do",
+      "  use MusicDBWeb.ConnCase, async: true",
       "end"
     ]
   },
@@ -44,20 +44,20 @@
     "type": "html",
     "alternate": "test/music_db_web/controllers/{}_html_test.exs",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}HTML do",
-      "  use MusicDbWeb, :html",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}HTML do",
+      "  use MusicDBWeb, :html",
       "end"
     ]
   },
 
   "test/music_db_web/controllers/*_html_test.exs": {
-    "type": "test",
+    "type": "test-html",
     "alternate": "lib/music_db_web/controllers/{}_html.ex",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}HTMLTest do",
-      "  use MusicDbWeb.ConnCase, async: true",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}HTMLTest do",
+      "  use MusicDBWeb.ConnCase, async: true",
       "",
-      "  alias MusicDbWeb.{camelcase|capitalize|dot}HTML",
+      "  alias MusicDBWeb.{camelcase|capitalize|dot}HTML",
       "end"
     ]
   },
@@ -66,20 +66,20 @@
     "type": "channel",
     "alternate": "test/music_db_web/channels/{}_channel_test.exs",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}Channel do",
-      "  use MusicDbWeb, :channel",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}Channel do",
+      "  use MusicDBWeb, :channel",
       "end"
     ]
   },
 
   "test/music_db_web/channels/*_channel_test.exs": {
-    "type": "test",
+    "type": "test-channel",
     "alternate": "lib/music_db_web/channels/{}_channel.ex",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}ChannelTest do",
-      "  use MusicDbWeb.ChannelCase, async: true",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}ChannelTest do",
+      "  use MusicDBWeb.ChannelCase, async: true",
       "",
-      "  alias MusicDbWeb.{camelcase|capitalize|dot}Channel",
+      "  alias MusicDBWeb.{camelcase|capitalize|dot}Channel",
       "end"
     ]
   },
@@ -88,8 +88,8 @@
     "type": "live",
     "alternate": "test/music_db_web/live/{}_test.exs",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot} do",
-      "  use MusicDbWeb, :live_view",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot} do",
+      "  use MusicDBWeb, :live_view",
       "",
       "  def render(assigns) do",
       "    ~H\"\"\"",
@@ -100,11 +100,11 @@
   },
 
   "test/music_db_web/live/*_test.exs": {
-    "type": "test",
+    "type": "test-live",
     "alternate": "lib/music_db_web/live/{}.ex",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}Test do",
-      "  use MusicDbWeb.ConnCase, async: true",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}Test do",
+      "  use MusicDBWeb.ConnCase, async: true",
       "",
       "  import Phoenix.LiveViewTest",
       "",
@@ -119,22 +119,22 @@
     "type": "component",
     "alternate": "test/music_db_web/components/{}_component_test.exs",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}Component do",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}Component do",
       "  use Phoenix.Component",
       "end"
     ]
   },
 
   "test/music_db_web/components/*_component_test.exs": {
-    "type": "test",
+    "type": "test-component",
     "alternate": "lib/music_db_web/components/{}_component.ex",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}ComponentTest do",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}ComponentTest do",
       "  use ExUnit.Case, async: true",
       "",
       "  import Phoenix.LiveViewTest",
       "  import Phoenix.Component, only: [sigil_H: 2]",
-      "  import MusicDbWeb.{camelcase|capitalize|dot}Component",
+      "  import MusicDBWeb.{camelcase|capitalize|dot}Component",
       "end"
     ]
   },
@@ -143,22 +143,22 @@
     "type": "components",
     "alternate": "test/music_db_web/components/{}_components_test.exs",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}Components do",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}Components do",
       "  use Phoenix.Component",
       "end"
     ]
   },
 
   "test/music_db_web/components/*_components_test.exs": {
-    "type": "test",
+    "type": "test-components",
     "alternate": "lib/music_db_web/components/{}_components.ex",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}ComponentsTest do",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}ComponentsTest do",
       "  use ExUnit.Case, async: true",
       "",
       "  import Phoenix.LiveViewTest",
       "  import Phoenix.Component, only: [sigil_H: 2]",
-      "  import MusicDbWeb.{camelcase|capitalize|dot}Components",
+      "  import MusicDBWeb.{camelcase|capitalize|dot}Components",
       "end"
     ]
   },
@@ -166,8 +166,8 @@
   "test/music_db_web/features/*_test.exs": {
     "type": "feature",
     "template": [
-      "defmodule MusicDbWeb.{camelcase|capitalize|dot}Test do",
-      "  use MusicDbWeb.FeatureCase, async: true",
+      "defmodule MusicDBWeb.{camelcase|capitalize|dot}Test do",
+      "  use MusicDBWeb.FeatureCase, async: true",
       "end"
     ]
   },
@@ -189,6 +189,17 @@
       "  use ExUnit.Case, async: true",
       "",
       "  alias {camelcase|capitalize|dot}",
+      "end"
+    ]
+  },
+
+  "test/examples/*_test.exs": {
+    "type": "test-example",
+    "template": [
+      "defmodule Examples.{camelcase|capitalize|dot}Test do",
+      "  use MusicDB.DataCase, async: true",
+      "",
+      "  alias MusicDB.Repo",
       "end"
     ]
   }
