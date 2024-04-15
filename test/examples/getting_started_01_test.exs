@@ -19,7 +19,7 @@ defmodule Examples.GettingStarted01Test do
       selected = Repo.get_by(Artist, name: "bye")
       assert updated == selected
 
-      {:ok, deleted} = Repo.delete(selected)
+      {:ok, _deleted} = Repo.delete(selected)
 
       selected = Repo.get_by(Artist, name: "bye")
       assert selected == nil
